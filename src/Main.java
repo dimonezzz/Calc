@@ -10,7 +10,8 @@ public class Main {
 
     public static String calc(String input) {
         String[] string = input.split(" ");
-        if (string.length == 3) {
+        if (string.length == 3 && Integer.parseInt(string[0]) > 0 && Integer.parseInt(string[0]) < 11
+                && Integer.parseInt(string[2]) > 0 && Integer.parseInt(string[2]) < 11) {
             switch (string[1]) {
                 case "+":
                     input = String.valueOf(Integer.parseInt(string[0]) + Integer.parseInt(string[2]));
@@ -23,9 +24,10 @@ public class Main {
                 case "/":
                     if (string[2].equals("0")) {
                         System.out.println("Делить на 0 нельзя!");
-                    } else
-                    {input = String.valueOf(Integer.parseInt(string[0]) / Integer.parseInt(string[2]));
-                    System.out.println(input);}
+                    } else {
+                        input = String.valueOf(Integer.parseInt(string[0]) / Integer.parseInt(string[2]));
+                        System.out.println(input);
+                    }
                     break;
                 case "*":
                     input = String.valueOf(Integer.parseInt(string[0]) * Integer.parseInt(string[2]));
