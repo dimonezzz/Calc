@@ -22,12 +22,8 @@ public class Main {
                     System.out.println(input);
                     break;
                 case "/":
-                    if (string[2].equals("0")) {
-                        System.out.println("Делить на 0 нельзя!");
-                    } else {
                         input = String.valueOf(Integer.parseInt(string[0]) / Integer.parseInt(string[2]));
                         System.out.println(input);
-                    }
                     break;
                 case "*":
                     input = String.valueOf(Integer.parseInt(string[0]) * Integer.parseInt(string[2]));
